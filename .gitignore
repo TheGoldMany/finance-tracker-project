@@ -1,0 +1,51 @@
+# Visual Studio és .NET fájlok
+.vs/
+bin/
+obj/
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+*_i.c
+*_p.c
+*.ilk
+*.meta
+*.obj
+*.pch
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.log
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.svclog
+*.scc
+
+# Visual Studio projektek
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+
+# NuGet csomagok
+packages/
+*.nupkg
+
+# MSTest teszteredmények
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# Egyéb
+.DS_Store
+Thumbs.db

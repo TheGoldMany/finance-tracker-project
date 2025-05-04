@@ -1,0 +1,43 @@
+﻿<Window x:Class="FinancialTracker.Views.HelpWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FinancialTracker.Views"
+        mc:Ignorable="d"
+        Title="Pénzügyi Követő Rendszer - Felhasználói Kézikönyv" Height="700" Width="900"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Fejléc -->
+        <Border Grid.Row="0" Background="#3498db" Padding="10">
+            <TextBlock Text="PÉNZÜGYI KÖVETŐ RENDSZER - FELHASZNÁLÓI KÉZIKÖNYV" 
+                       FontSize="22" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center"/>
+        </Border>
+
+        <!-- Tartalom -->
+        <ScrollViewer Grid.Row="1" Margin="0,0,0,0" VerticalScrollBarVisibility="Auto">
+            <FlowDocumentReader ViewingMode="Scroll" IsFindEnabled="True" IsPageViewEnabled="True" 
+                              IsPrintEnabled="True" Zoom="100">
+                <FlowDocument x:Name="HelpDocument" FontFamily="Segoe UI" FontSize="12" PagePadding="20">
+                    <!-- A tartalmat a code-behind fájlban töltjük be -->
+                </FlowDocument>
+            </FlowDocumentReader>
+        </ScrollViewer>
+
+        <!-- Lábléc -->
+        <Border Grid.Row="2" Background="#ecf0f1" Padding="10">
+            <Grid>
+                <TextBlock Text="A programot UKR készítette féléves projektként." 
+                           HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <Button Content="Bezárás" Width="100" Height="30" HorizontalAlignment="Right"
+                        Click="CloseButton_Click"/>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>
